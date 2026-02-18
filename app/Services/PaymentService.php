@@ -69,21 +69,9 @@ class PaymentService
         return $this->transactionRepository->getTransactions($perPage);
     }
 
-//
-//    /**
-//     * Get transaction by ID
-//     */
-//    public function getTransaction(string $id): ?Transaction
-//    {
-//        return $this->transactionRepository->find($id);
-//    }
-
 
     /**
      * Fake Acquirer Logic Implementation
-     *
-     * @param TransactionDTO $dto
-     * @return string approved|rejected
      */
     protected function determineFakeAcquirerStatus(TransactionDTO $dto): string
     {
